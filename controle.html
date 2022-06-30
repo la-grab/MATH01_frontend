@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>MATH01 - DS</title>
+</head>
+
+<body>
+<div id="bloc_page">
+  <header>
+    <div id="titre_principal">
+      <div id="logo">
+        <img src="ressources/icon.png" alt="Logo de MATH01" />
+        <h1>MATH01</h1>
+      </div>
+      <h2>Générateur de documents pour l'enseignant de mathématiques</h2>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="document.html">Créer un document</a></li>
+        <li><a href="perso.html">Espace personnel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section>
+    <article>
+      <h1>Créer un contrôle (<a href="document.html">Changer de type de document</a>)</h1>
+      <form>
+        Classe :
+        <select name="classe">
+          <option value="6">6ème</option>
+          <option value="5">5ème</option>
+          <option value="4">4ème</option>
+          <option value="3">3ème</option>
+          <option value="2">2nd</option>
+          <option value="1">1ère</option>
+          <option value="0">Tale</option>
+        </select>valeurs prédéfinies dans les préférences
+        <br/>
+        <label for="numeo">Numéro du chapitre : </label>
+        <input name="numero" type="int" maxlength="2" size="2" /> Nom du chapitre :
+        <br/>
+        <label for="quantity">Nombre de sujets :</label>
+        <input name="quantity" type="int" value="1" maxlength="1" size ="1" />
+        Valeur prédéfinie dans préférences
+        <br/>
+        Type de notation
+        <input name="rd1" id="rd1-1" value="1" type="radio" />
+        <label for="rd1-1">Notation chiffrée</label>
+        <input name="rd1" id="rd1-2" value="2" type="radio" />
+        <label for="rd1-2">Notation par compétence</label>
+        <input name="rd1" id="rd1-3" value="3" type="radio" checked="checked" />
+        <label for="rd1-3">Les deux</label>
+        Valeur prédéfinie dans les préférences
+        <br/>
+        Indiquer une date de passation
+        <input name="date_bool" type="checkbox" />
+        <input name ="date" type="date" />
+        Valeur de la checkbox prédéfinie dans les préférences
+        <p><br/ ></p>
+
+        <hr/>
+
+        <input name="qc" id="rd1-1" value="1" type="checkbox" />
+        <label for="qc">Questions de cours</label>
+        <br/>
+        <input name="numero" type="int" value="(Barre de recherche) donner" maxlength="30" size="40" /><br/>
+        <select name="qc_choice">
+          <option value="6">Liste déroulante avec les exercices associés à (aux) mot(s) clé(s)</option>
+          <option value="5">Donner la définition d'un triangle isocèle</option>
+          <option value ="4">Donner la définition d'une fraction décimale</option>
+        </select>
+
+        <p><br/></p>
+
+        <input name="qc" id="rd1-1" value="1" type="checkbox" />
+        <label for="qc">Exercices (valeurs aléatoires)</label>
+        <br/>
+        <input name="numero" type="int" value="(Barre de recherche) pythagore" maxlength="30" size="40" /><br/>
+        <select name="qc_choice">
+          <option value="6">Liste déroulante avec les exercices associés à (aux) mot(s) clé(s)</option>
+          <option value="5">Calculer la 3ème longueur d'ub triangle rectangle</option>
+          <option value ="4">Démontrer qu'un triangle est rectanlge</option>
+        </select>
+
+        <p><br/></p>
+
+        <input name="qc" id="rd1-1" value="1" type="checkbox" />
+        <label for="qc">Problèmes (annales brevet par exemple)</label>
+        <br/>
+        <input name="numero" type="int" value="(Barre de recherche) Aire Volume" maxlength="30" size="40" /><br/>
+        <select name="qc_choice">
+          <option value="6">Liste déroulante avec les exercices associés à (aux) mot(s) clé(s)</option>
+          <option value="5">La pyramide de Gizeh</option>
+          <option value ="4">Marc souhaite s'acheter une pisicine</option>
+        </select>
+
+        <p>
+          <br/>
+        <hr/>
+        </p>
+
+        Compétences proposées (possibilité de les réorganiser)
+        <br/>
+        <input name="competence1"  value="1" type="checkbox" checked="checked"/>
+        <label for="competence1">Se reprérer dans l'espace</label>
+        <br/>
+        <input name ="competence2" value="2" type="checkbox" checked="checked"/>
+        <label for="competence2">Calculer avec des nombres rationnels</label>
+        <br/>
+        <input name ="competence3" value="2" type="checkbox"/>
+        <label for="competence3">Utiliser la calcul littéral</label>
+        <br/><br/>
+        Résumé des exercices (possibilité de les réorganiser, supprimer et modifier le nombre)<br/>
+        Questions de cours<br/>
+        Exercice 1. Pythagore<br/>
+        Exercice 2. Géométrie dans l'espace<br/>
+        <br/>
+        <hr/>
+        <p> <input type="submit" value="Créer le contrôle" onclick="afficheEntree();"></p>
+
+      </form>
+    </article>
+  </section>
+
+  <section>
+    <article id="editeur_latex">
+      <p>Fichier latex généré par le formulaire puis éditable.<br/>Mini barre d'outil latex</p>
+    </article>
+    <article id="preview_pdf">
+      <p>Preview en live du document en pd. DL en un click</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>Gabriel MILLET - Juin 2022</p>
+    <p>Contact</p>
+  </footer>
+</div>
+</body>
+</html>
